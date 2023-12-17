@@ -1,13 +1,14 @@
+import React from "react";
 import "./App.css";
 import Kanban from "./components/Kanban";
 import Navbar from "./components/Navbar";
 
 function App() {
   return (
-    <div className="App">
+    <React.Fragment>
       <Navbar />
       <Kanban />
-    </div>
+    </React.Fragment>
   );
 }
 

@@ -1,17 +1,35 @@
 .taskinfo {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
   padding: 10px;
-  /* background: ${({ isDragging }) =>
-        isDragging ? 'rgba(255, 59, 59, 0.15)' : 'white'}; */
   background: #e5d7ff;
-  margin-top: 15px;
-  width: 210px;
+  margin-top: 10px;
+  width: 240px;
   height: 135px;
 
   border-radius: 5px;
+}
+.sticky-header {
+  position: fixed;
+}
+.Header {
+  margin-left: 20px;
+  font-weight: bold;
+  font-size: 32px;
+  cursor: pointer;
+}
+.search-container {
+  width: 100%;
+  height: 50px;
+}
+.searck-input {
+  outline: none;
+  padding: 15px 12px;
+  display: flex;
+  border: 1px solid gray;
+  border-radius: 8px;
+  width: 200px;
+  margin: auto;
 }
 .tasklist {
   min-height: 100px;
@@ -37,7 +55,9 @@
   min-height: 80vh;
 }
 .container {
+  margin-top: 100px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -53,28 +73,23 @@
   background-color: #f7f3ff;
 }
 .title {
-  width: 210px;
+  width: 240px;
   height: 44px;
   border-top: 4px solid #6f3eb2;
-  border: 4px, 0px, 0px, 0px;
-  font-family: Mulish;
-  font-size: 16px;
+  border: 4px 0px 0px 0px;
+  font-size: 18px;
   font-weight: 600;
   line-height: 24px;
   letter-spacing: 0px;
-  padding: 0px 0px 0px 8px;
+  padding: 6px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 .profile__info__container {
   display: flex;
-  justify-content: space-around;
-  flex-direction: row;
   width: 100%;
-  align-items: center;
 }
 .profile__info {
   display: flex;
-  justify-content: center;
   flex-direction: column;
   width: 100%;
 }
@@ -92,8 +107,13 @@
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
-  letter-spacing: 0px;
   text-align: left;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  max-height: 50px;
+  overflow: hidden
 }
 .profile__role {
   font-family: Nunito Sans;
@@ -111,13 +131,6 @@
   left: 912px;
   border-radius: 50px;
   background-color: #f7f3ff;
-}
-.App {
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
 }
 .btn__shortlist {
   width: Hug (81px);
